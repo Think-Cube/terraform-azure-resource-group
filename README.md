@@ -45,7 +45,7 @@ No modules.
 ```
 module "rg" {
   source  = "spy86/rg/azure"
-  version = "1.0.3"
+  version = "1.0.4"
   resource_group_name = "test"
   environment = "dev" 
   region = "weu"
