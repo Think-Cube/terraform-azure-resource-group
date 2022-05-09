@@ -43,6 +43,10 @@ No modules.
 ## How to use
 
 ```
+provider "azurerm" {
+features {}
+}
+
 module "rg" {
   source  = "spy86/rg/azure"
   version = "1.0.4"
