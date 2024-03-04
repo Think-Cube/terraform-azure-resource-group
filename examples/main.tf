@@ -1,24 +1,20 @@
-## How to use
-
-```
 provider "azurerm" {
 features {}
 }
 
 module "rg" {
-  source  = "spy86/rg/azure"
-  version = "1.0.5"
+  source  = "Think-Cube/resource-group/azure"
+  version = "1.0.0"
   resource_group_name = "test"
   environment = "dev" 
   region = "weu"
   resource_group_location = "West Europe"
 
   default_tags = {
-      Administrator = "Someone"
-      Department = "IT"
-      CostCentre = "ABC123"
-      ContactPerson = "Someone@example.com"
+      Administrator     = "John Doe"
+      Department        = "IT"
+      CostCentre        = "CC123"
+      ContactPerson     = "Jane Smith"
       ManagedByTerraform = "True"
 }
 }
-```
