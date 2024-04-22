@@ -4,14 +4,18 @@ on:
 jobs:
   docs:
     runs-on: ubuntu-latest
+    permissions:
+        contents: 'read'
+        id-token: 'write'    
     steps:
     - uses: actions/checkout@v3
       with:
         ref: ${{ github.event.pull_request.head.ref }}
-    - name: Render terraform docs and push changes back to PR
-      uses: terraform-docs/gh-actions@main
+    - name: Render terraform docs inside the README.md and push changes back to PR branch
+      uses: terraform-docs/gh-actions@v1.0.0
       with:
         working-dir: .
         output-file: README.md
-        output-method: inject
+        output-method: replace
+        config-file: .terraform-docs.yml
         git-push: "true"
