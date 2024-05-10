@@ -12,6 +12,10 @@
 |------|---------|
 | <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.103.1 |
 
+## Modules
+
+No modules.
+
 ## Resources
 
 | Name | Type |
