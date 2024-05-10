@@ -1,25 +1,29 @@
 <!-- BEGIN_TF_DOCS -->
-#### Requirements
+## Requirements
 
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.4 |
-| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.100.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | 3.103.1 |
 
-#### Providers
+## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.100.0 |
+| <a name="provider_azurerm"></a> [azurerm](#provider\_azurerm) | 3.103.1 |
 
-#### Resources
+## Modules
+
+No modules.
+
+## Resources
 
 | Name | Type |
 |------|------|
-| [azurerm_resource_group.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/resources/resource_group) | resource |
-| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/3.100.0/docs/data-sources/client_config) | data source |
+| [azurerm_resource_group.main](https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/resources/resource_group) | resource |
+| [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/3.103.1/docs/data-sources/client_config) | data source |
 
-#### Inputs
+## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
@@ -29,7 +33,7 @@
 | <a name="input_resource_group_location"></a> [resource\_group\_location](#input\_resource\_group\_location) | The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created. | `string` | `"West Europe"` | no |
 | <a name="input_resource_group_name"></a> [resource\_group\_name](#input\_resource\_group\_name) | The Name which should be used for this Resource Group. Changing this forces a new Resource Group to be created. | `string` | n/a | yes |
 
-#### Outputs
+## Outputs
 
 | Name | Description |
 |------|-------------|
