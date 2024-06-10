@@ -18,6 +18,6 @@ jobs:
         with:
           github-token: ${{ secrets.GH_TOKEN }}
       - name: Merge pull request
-        uses: pascalgn/automerge-action@v0.14.3
+        uses: pascalgn/automerge-action@v0.16.3
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
