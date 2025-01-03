@@ -1,6 +1,3 @@
-###########################
-# Common vars
-###########################
 variable "environment" {
   description = "Variable that defines the name of the environment."
   type        = string
@@ -9,18 +6,12 @@ variable "environment" {
 variable "default_tags" {
   description = "A mapping of tags to assign to the resource."
   type        = map(any)
-  default = {
-    "ManagedByTerraform" = "True"
-  }
 }
 variable "region" {
   description = "Region in which resources are deployed."
   type        = string
   default     = "weu"
 }
-###########################
-# Resource groups vars
-###########################
 variable "resource_group_location" {
   description = "The Azure Region where the Resource Group should exist. Changing this forces a new Resource Group to be created."
   default     = "West Europe"
