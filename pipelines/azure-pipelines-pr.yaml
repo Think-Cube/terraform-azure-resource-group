@@ -17,7 +17,7 @@ variables:
   - name: VM_IMAGE
     value: ubuntu-latest
   - name: MODULE_NAME
-    value: "terraform-azure-resource-group"    
+    value: "terraform-azure-resource-group"
 pool:
   vmImage: $(VM_IMAGE)
 stages:
