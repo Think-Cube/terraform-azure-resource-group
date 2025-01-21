@@ -53,7 +53,9 @@ stages:
           displayName: 'Download terraform-docs' 
         - script: |
             # Variables
-            github_token="$(GITHUB_TOKEN)" 
+            source_branch="${SYSTEM_PULLREQUEST_SOURCEBRANCH#refs/heads/}"
+            github_token="${GITHUB_TOKEN}"
+
             # Generate or update README.md
             /tmp/terraform-docs markdown table . > README.md
 
@@ -66,15 +68,21 @@ stages:
               git commit -m "Update README.md with module documentation"
               
               # Set remote URL with authentication token
-              git remote set-url origin https://$(GITHUB_TOKEN)@github.com/Think-Cube/terraform-azure-resource-group.git
+              git remote set-url origin https://${github_token}@github.com/${GITHUB_REPO}.git
 
-              # Pull the latest changes to avoid conflicts (source branch of the PR)
-              git pull origin '$(System.PullRequest.SourceBranch)' --rebase
+              # Ensure we are on the correct branch
+              git checkout -b "$source_branch" || git checkout "$source_branch"
+
+              # Pull the latest changes to avoid conflicts
+              git fetch origin "$source_branch"
+              git merge origin/"$source_branch" --strategy-option=ours || exit 1
 
               # Push changes
-              git push origin HEAD:'$(System.PullRequest.SourceBranch)'
+              git push origin HEAD:"$source_branch"
             else
               echo "Failed to generate README.md"
               exit 1
             fi
           displayName: 'Generate and Update README.md Documentation'
+          env:
+            GITHUB_TOKEN: $(GITHUB_TOKEN)
