@@ -12,7 +12,7 @@ variables:
   - name: TERRAFORM_SEC_VERSION
     value: "v1.26.0"
   - name: GITHUB_REPO
-    value: "Think-Cube/Think-Cube-terraform-azure-resource-group-test"
+    value: "Think-Cube/terraform-azure-resource-group"
   - group: GITHUB-PAT-TOKEN
   - name: VM_IMAGE
     value: ubuntu-latest
