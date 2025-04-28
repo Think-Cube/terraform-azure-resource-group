@@ -44,7 +44,7 @@ stages:
         - task: TerraformInstaller@2
           displayName: 'Terraform Install'
           inputs:
-            terraformVersion: 'latest'          
+            terraformVersion: 'latest'
         - task: CmdLine@2
           displayName: 'Terraform Init'
           inputs:
