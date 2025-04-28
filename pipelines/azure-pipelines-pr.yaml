@@ -33,7 +33,7 @@ stages:
         - task: TerraformInstaller@2
           displayName: 'Terraform Install'
           inputs:
-            terraformVersion: 'latest'          
+            terraformVersion: 'latest'
         - task: TerraformCLI@0
           displayName: 'Terraform Init'
           inputs:
