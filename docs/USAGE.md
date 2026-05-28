@@ -1,5 +1,9 @@
+# Usage
+
+Examples are available under the examples/ directory. Use the module as:
+
 module "resource_group" {
-  source = "../../"
+  source = "./"
 
   environment             = "dev"
   application             = "webapp"
@@ -11,10 +15,4 @@ module "resource_group" {
     environment = "dev"
     project     = "example"
   }
-
-  # Lifecycle and control examples
-  prevent_destroy        = false
-  create_before_destroy  = false
-  ignore_changes         = []
-  depends_on             = []
 }
