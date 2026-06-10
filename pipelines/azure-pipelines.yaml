@@ -1,16 +1,12 @@
 name: $(MODULE_NAME)-$(date:yyyyMMdd)-$(rev:.r)
-
 parameters:
   - name: publish_module
     type: boolean
     default: false
-
 trigger:
   branches:
     include:
-      - master
       - main
-
 resources:
   repositories:
     - repository: self
@@ -19,13 +15,11 @@ resources:
       name: Think-Cube/azure-devops-pipeline-templates
       ref: refs/heads/develop
       endpoint: github.com
-
 variables:
   - name: VM_IMAGE
     value: ubuntu-latest
   - name: MODULE_NAME
     value: 'terraform-azure-resource-group'
-
 stages:
   - template: azure-devops/templates/pipelines/validate_and_publish_tf_module.yml@templates
     parameters:
