@@ -1,22 +1,28 @@
-name: "Checkov"
+name: checkov
 
 on:
   push:
-    paths:
-      - '**/*.tf'
+    branches: [ "main", "master" ]
   pull_request:
-    paths:
-      - '**/*.tf'
-  workflow_dispatch: {}
+    branches: [ "main", "master" ]
+  workflow_dispatch:
 
 jobs:
-  checkov:
+  scan:
+    permissions:
+      contents: read
+      security-events: write
+      actions: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Run Checkov
-        uses: bridgecrew/checkov-action@master
+      - uses: actions/checkout@v3
+      - name: Checkov GitHub Action
+        uses: bridgecrewio/checkov-action@v12
         with:
-          directory: .
-          skip_check: ''
+          output_format: cli,sarif
+          output_file_path: console,results.sarif
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v2
+        if: success() || failure()
+        with:
+          sarif_file: results.sarif
