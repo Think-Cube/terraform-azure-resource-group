@@ -29,5 +29,6 @@ stages:
       tfsecVersion: 'v1.26.0'
       allowTelemetryCollection: false
       terraformDocsVersion: 'v0.19.0'
+      GithubRepo: 'Think-Cube/terraform-azure-resource-group'
       user_email: 'devops-bot@thinkcube.dev'
       user_name: 'DevOps Bot'
