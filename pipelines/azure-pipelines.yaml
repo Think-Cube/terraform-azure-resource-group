@@ -35,7 +35,7 @@ resources:
     - repository: templatesRepo
       type: github
       name: Think-Cube/azure-devops-pipeline-templates
-      ref: refs/heads/main
+      ref: refs/heads/develop
       endpoint: github.com
 
 variables:
