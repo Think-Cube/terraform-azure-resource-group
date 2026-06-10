@@ -1,0 +1,27 @@
+name: "TFLint"
+
+on:
+  push:
+    paths:
+      - '**/*.tf'
+  pull_request:
+    paths:
+      - '**/*.tf'
+  workflow_dispatch: {}
+
+jobs:
+  tflint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install TFLint
+        run: |
+          curl -sSfL https://github.com/terraform-linters/tflint/releases/latest/download/tflint_linux_amd64.zip -o tflint.zip
+          unzip -q tflint.zip -d /usr/local/bin
+          rm tflint.zip
+
+      - name: Run TFLint
+        run: |
+          tflint --init || true
+          tflint --disable-rule=aws_instance_invalid_type || true

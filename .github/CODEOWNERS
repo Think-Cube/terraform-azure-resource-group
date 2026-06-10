@@ -1,3 +1,17 @@
 # CODEOWNERS
-# Repository owners: update if needed
-* @Think-Cube/think-cube
+# Owners for repo areas - update team/user handles as needed
+
+# Global owners
+/* @Think-Cube/terraform-team @Think-Cube/think-cube
+
+# Docs and governance
+/.github/ @Think-Cube/docs-team
+
+# Examples
+/examples/ @Think-Cube/terraform-team
+
+# Modules
+/modules/ @Think-Cube/terraform-team
+
+# CI and workflows
+/.github/workflows/ @Think-Cube/ci-team

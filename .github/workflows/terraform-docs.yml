@@ -1,0 +1,28 @@
+name: "Terraform Docs"
+
+on:
+  push:
+    paths:
+      - '**/*.tf'
+      - 'README.md'
+  workflow_dispatch: {}
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run terraform-docs and inject to README
+        uses: terraform-docs/gh-actions@v0.16.0
+        with:
+          args: --output-file README.md --output-mode inject .
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: update Terraform docs"
+          file_pattern: README.md
+          branch: ${{ github.ref_name }}
+          commit_user_name: github-actions[bot]
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com

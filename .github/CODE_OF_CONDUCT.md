@@ -1,43 +1,43 @@
-# Contributor Covenant Code of Conduct
+# Contributor Covenant Code of Conduct (Enterprise)
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+To foster an inclusive, professional, and safe environment, contributors and maintainers pledge to ensure participation is harassment-free and respectful for everyone.
 
-## Our Standards
+## Standards of Conduct
 
-Examples of behavior that contributes to a positive environment include:
-
-- Demonstrating empathy and kindness toward other people
-- Being respectful of differing opinions, viewpoints, and experiences
-- Giving and gracefully accepting constructive feedback
-- Accepting responsibility and apologizing to those affected by our mistakes
-- Focusing on what is best for the community
-
-Examples of unacceptable behavior by participants include:
-
-- The use of sexualized language or imagery and unwelcome sexual attention or advances
-- Trolling, insulting/derogatory comments, and personal or political attacks
-- Public or private harassment
-- Publishing others' private information, such as a physical or electronic address, without explicit permission
-- Other conduct which could reasonably be considered inappropriate in a professional setting
+Acceptable behaviours include empathy, respectful discussion, giving and accepting constructive feedback, and prioritizing the community's best interests. Unacceptable behaviour includes harassment, hate speech, doxxing, threats, and any conduct that would be inappropriate in a professional environment.
 
 ## Enforcement Responsibilities
 
-Project maintainers are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and fair corrective action in response to any behavior that they deem inappropriate, threatening, offensive, or harmful.
+Maintainers and designated community moderators are responsible for enforcing this policy. Enforcement actions may include warnings, temporary or permanent bans, or referral to relevant authorities in severe cases.
 
 ## Scope
 
-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+This Code of Conduct applies to all project spaces (issues, PRs, discussions, mailing lists, chat, events) and also to external representation of the project.
 
-## Reporting Guidelines
+## Reporting and Confidentiality
 
-If you are subject to or witness unacceptable behavior, or have any other concerns, please notify the project team as soon as possible. You can report incidents to security@thinkcube.dev. All reports will be reviewed and investigated promptly and fairly.
+Report incidents to security@thinkcube.dev. Reports may be submitted privately via GitHub's vulnerability reporting or by sending encrypted email to security@thinkcube.dev using the project's PGP key (available in SECURITY.md). Report should include:
+- Description of the incident
+- Time and place (link to issue/PR, timestamps)
+- Names/handles of involved parties (if known)
+- Any supporting evidence (logs, screenshots)
+
+The security team acknowledges receipt within 72 hours and will handle reports confidentially. Retaliation against reporters is strictly prohibited.
 
 ## Enforcement Process
 
-All complaints will be reviewed and investigated and will result in a response that is deemed necessary and appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
+1. Triage by security/maintainers.
+2. Private investigation and evidence collection.
+3. Proportional remedy (warning, content removal, temporary suspension, or ban).
+4. If applicable, notification to affected parties and follow-up.
+
+## Appeals
+
+If you disagree with an enforcement action, contact security@thinkcube.dev with additional context; appeals will be reviewed by an independent panel of maintainers.
 
 ## Attribution
 
-This Code of Conduct is adapted from the Contributor Covenant, version 2.1, available at https://www.contributor-covenant.org/version/2/1/
+Based on the Contributor Covenant (version 2.1): https://www.contributor-covenant.org/version/2/1/
+
