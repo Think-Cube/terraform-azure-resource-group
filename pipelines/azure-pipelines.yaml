@@ -4,24 +4,6 @@ parameters:
   - name: publish_module
     type: boolean
     default: false
-  - name: terraformVersion
-    type: string
-    default: 'latest'
-  - name: tfsecVersion
-    type: string
-    default: 'v1.26.0'
-  - name: allowTelemetryCollection
-    type: boolean
-    default: false
-  - name: GithubRepo
-    type: string
-    default: 'Think-Cube/terraform-azure-resource-group'
-  - name: ModuleName
-    type: string
-    default: 'terraform-azure-resource-group'
-  - name: ModuleDescription
-    type: string
-    default: 'Terraform module for azure resource group'
 
 trigger:
   branches:
@@ -41,16 +23,16 @@ resources:
 variables:
   - name: VM_IMAGE
     value: ubuntu-latest
-  - name: TERRAFORM_SEC_VERSION
-    value: ${{ parameters.tfsecVersion }}
+  - name: MODULE_NAME
+    value: 'terraform-azure-resource-group'
 
 stages:
   - template: azure-devops/templates/pipelines/validate_and_publish_tf_module.yml@templates
     parameters:
       publishModule: ${{ parameters.publish_module }}
-      terraformVersion: ${{ parameters.terraformVersion }}
-      tfsecVersion: ${{ parameters.tfsecVersion }}
-      allowTelemetryCollection: ${{ parameters.allowTelemetryCollection }}
-      GithubRepo: ${{ parameters.GithubRepo }}
-      ModuleName: ${{ parameters.ModuleName }}
-      ModuleDescription: ${{ parameters.ModuleDescription }}
+      terraformVersion: 'latest'
+      tfsecVersion: 'v1.26.0'
+      allowTelemetryCollection: false
+      GithubRepo: 'Think-Cube/terraform-azure-resource-group'
+      ModuleName: 'terraform-azure-resource-group'
+      ModuleDescription: 'Terraform module for azure resource group'
