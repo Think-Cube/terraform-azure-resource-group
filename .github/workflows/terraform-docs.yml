@@ -13,10 +13,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Run terraform-docs and inject to README
-        uses: terraform-docs/gh-actions@v0.16.0
+      - name: Generate terraform-docs using container
+        uses: docker://ghcr.io/terraform-docs/terraform-docs:0.16.0
         with:
-          args: --output-file README.md --output-mode inject .
+          entrypoint: /bin/sh
+          args: -c "terraform-docs markdown table --output-file README.md ."
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4

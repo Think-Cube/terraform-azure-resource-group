@@ -24,4 +24,4 @@ jobs:
       - name: Run TFLint
         run: |
           tflint --init || true
-          tflint --disable-rule=aws_instance_invalid_type || true
+          tflint || true
