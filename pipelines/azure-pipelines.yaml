@@ -36,6 +36,7 @@ resources:
       type: github
       name: Think-Cube/azure-devops-pipeline-templates
       ref: refs/heads/main
+      endpoint: github.com
 
 variables:
   - name: VM_IMAGE
