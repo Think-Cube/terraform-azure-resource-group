@@ -32,7 +32,7 @@ trigger:
 resources:
   repositories:
     - repository: self
-    - repository: templatesRepo
+    - repository: templates
       type: github
       name: Think-Cube/azure-devops-pipeline-templates
       ref: refs/heads/develop
@@ -45,7 +45,7 @@ variables:
     value: ${{ parameters.tfsecVersion }}
 
 stages:
-  - template: azure-devops/templates/pipelines/validate_and_publish_tf_module.yml@templatesRepo
+  - template: azure-devops/templates/pipelines/validate_and_publish_tf_module.yml@templates
     parameters:
       publishModule: ${{ parameters.publish_module }}
       terraformVersion: ${{ parameters.terraformVersion }}
