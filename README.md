@@ -37,5 +37,5 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_id"></a> [id](#output\_id) | The ID of the Resource Group. |
-| <a name="output_name"></a> [name](#output\_name) | The Name of the Resource Group. |
+| <a name="output_id"></a> [id](#output\_id) | The ID of the Resource Group |
+| <a name="output_name"></a> [name](#output\_name) | The Name of the Resource Group |
