@@ -4,6 +4,10 @@ pr:
   branches:
     include:
       - refs/heads/main
+  paths:
+    include:
+      - '**/*.tf'
+      - '**/*.tf.json'
 resources:
   repositories:
     - repository: self
