@@ -1,5 +1,5 @@
 module "resource_group" {
-  source = "github.com/Think-Cube/terraform-azure-resource-group?ref=v1.0.0"
+  source = "../.."
 
   name     = "rg-myapp-dev"
   location = "West Europe"
