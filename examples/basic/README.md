@@ -11,7 +11,8 @@ module "resource_group" {
     environment = "dev"
     managed_by  = "terraform"
   }
-}```
+}
+```
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
