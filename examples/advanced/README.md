@@ -14,7 +14,8 @@ module "resource_group" {
     cost_center = "platform"
     owner       = "platform-team"
   }
-}```
+}
+```
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
