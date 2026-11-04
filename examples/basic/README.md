@@ -1,47 +1,46 @@
-# Terraform Azure Resource Group Module
+# Example: Basic — Azure Resource Group
 
-This module creates an **Azure Resource Group** with standardized naming and tagging conventions.
-
-## Description
-
-The module provisions an Azure Resource Group and automatically generates a consistent name if none is provided.  
-It uses the following naming pattern: `<environment>-<application>-<region>-rg`
-
-This ensures predictable and organized resource naming across environments.
-
-## Features
-
-- Automatically generates a **resource group name** based on environment, application, and region  
-- Supports **custom name override** if `resource_group_name` is provided  
-- Applies **default tags** for consistent resource metadata  
-- Allows flexible **location selection** for deployment  
-
-## Typical Use Cases
-
-- Foundation module for all Azure infrastructure components  
-- Used as a dependency for other Terraform modules (ACR, Redis, App Service, etc.)  
-- Useful for maintaining consistent naming and tagging across environments  
-
-## Notes
-
-- If `resource_group_name` is empty, the name will be generated automatically.  
-- Ensure the provided location matches Azure region naming conventions (e.g., `westeurope`, `eastus`).  
-- Recommended as the **first module** to run in an Azure infrastructure stack.
-
-```
+```hcl
 module "resource_group" {
-  source = "./terraform-azure-resource-group"
+  source = "github.com/Think-Cube/terraform-azure-resource-group?ref=v1.0.0"
 
-  environment             = "dev"
-  application             = "webapp"
-  region                  = "westeurope"
-  resource_group_name     = ""
-  resource_group_location = "westeurope"
+  name     = "rg-myapp-dev"
+  location = "West Europe"
 
-  default_tags = {
+  tags = {
     environment = "dev"
-    project     = "example"
+    managed_by  = "terraform"
   }
 }
-
 ```
+
+<!-- BEGIN_TF_DOCS -->
+## Requirements
+
+| Name | Version |
+|------|---------|
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.0 |
+| <a name="requirement_azurerm"></a> [azurerm](#requirement\_azurerm) | ~> 5.0 |
+
+## Providers
+
+No providers.
+
+## Modules
+
+| Name | Source | Version |
+|------|--------|---------|
+| <a name="module_resource_group"></a> [resource\_group](#module\_resource\_group) | github.com/Think-Cube/terraform-azure-resource-group | v1.0.0 |
+
+## Resources
+
+No resources.
+
+## Inputs
+
+No inputs.
+
+## Outputs
+
+No outputs.
+<!-- END_TF_DOCS -->
